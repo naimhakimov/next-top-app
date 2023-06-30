@@ -16,7 +16,8 @@
     background: var(--primary);
 }
 
-.primary svg {
+.primary svg,
+.ghost:hover svg{
     fill: var(--white);
 }
 
