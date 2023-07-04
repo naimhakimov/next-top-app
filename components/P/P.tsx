@@ -1,3 +1,4 @@
+import {JSX} from 'react';
 import { PProps } from "./P.props";
 import styles from './P.module.css';
 import cn from "classnames";
