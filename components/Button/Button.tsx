@@ -1,3 +1,4 @@
+import {JSX} from 'react';
 import {ButtonProps} from "./Button.props";
 import styles from './Button.module.css';
 import ArrowIcon from '../../public/arrow.svg';

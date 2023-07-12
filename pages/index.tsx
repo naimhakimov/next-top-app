@@ -1,23 +1,24 @@
-import {Button, Htag, P, Tag} from "@/components";
+import { JSX } from "react";
+import { Button, Htag, P, Rating, Tag } from "@/components";
 import { useState } from "react";
+import { withLayout } from "@/layout/Layout";
 
-function App(): JSX.Element {
-    const [counter, setCounter] = useState<number>(0);
+function Home(): JSX.Element {
+    const [rating, setRating] = useState<number>(3);
     return (
-        <div>
-            <Htag tag="h1">{counter}</Htag>
+        <>
             <Htag tag="h2">Текст</Htag>
             <Htag tag="h3">Текст</Htag>
-            <Button arrow='right' appearance='primary' onClick={() => setCounter(x => x+ 1)}>Button</Button>
             <Button arrow='down' appearance='ghost'>Button</Button>
             <P size='lg'>Болшой</P>
             <P size='md'>Средный</P>
             <P size='sm'>Маленькый</P>
             <Tag>Photoshop</Tag>
             <Tag color='red' size='md'>Дизайн</Tag>
-            <Tag color='primary' href='lwerwerwerwe'>Дизайн</Tag>
-        </div>
+            <Tag color='primary'>Дизайн</Tag>
+            <Rating rating={rating} setRating={setRating} isEditable={true}/>
+        </>
     );
 }
 
-export default App;
+export default withLayout(Home);
